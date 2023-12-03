@@ -1,0 +1,19 @@
+<div class="todo">
+  <h1 class="todo__title">todos</h1>
+  <div class="todo-wrapper">
+    <app-add-todo (addTodoEvent)="addTodo($event)" (toggleAllEvent)="toggleAll($event)"/>
+    <ul class="todo-list">
+      @for (todo of filteredTodos(); track todo.id) {
+      <li class="todo-list__item">
+        <app-todo-item [todo]="todo"
+                       (removeTodoEvent)="removeTodo($event)"
+                       (completeTodoEvent)="completeTodo($event)">
+        </app-todo-item>
+      </li>
+      }
+    </ul>
+    @if (todoList().length) {
+      <app-list-footer [uncompletedTodos]="uncompletedTodos()" (setActiveFilterEvent)="setActiveFilter($event)"/>
+    }
+  </div>
+</div>

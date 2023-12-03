@@ -1,0 +1,12 @@
+@import '../../../assets/helpers/variables.scss';
+
+header {
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: $box-shadow;
+
+  .logo {
+    cursor: pointer;
+    max-width: 120px;
+  }
+}

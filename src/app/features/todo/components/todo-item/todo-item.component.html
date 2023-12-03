@@ -1,0 +1,9 @@
+<div class="todo-item">
+  <div class="todo-item__complete">
+    <mat-checkbox [color]="'primary'" [checked]="todo.completed" (change)="onChange()"></mat-checkbox>
+  </div>
+  <div class="todo-item__text" [class.todo-item__text--completed]="todo.completed">{{ todo.text }}</div>
+  <button class="todo-item__remove" mat-icon-button aria-label="Remove Todo" (click)="removeTodo(todo.id)">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>

@@ -1,0 +1,51 @@
+@import '../../../../../assets/helpers/variables';
+
+.todo-item {
+  background: #ffffff;
+  border-bottom: 1px solid #ededed;
+  color: $main-color;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  padding-right: 16px;
+  height: 70px;
+  width: 100%;
+  position: relative;
+
+  &:hover {
+    .todo-item__remove {
+      opacity: 1;
+    }
+  }
+
+  &__complete {
+    position: absolute;
+    display: flex;
+    left: 10px;
+  }
+
+  &__text {
+    line-height: 40px;
+    padding-left: 60px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: color 0.2s linear;
+
+    &--completed {
+      color: lighten($main-color, 50%);
+      text-decoration: line-through;
+    }
+  }
+
+  &__remove {
+    color: lighten($main-color, 50%);
+    cursor: pointer;
+    margin-left: auto;
+    opacity: 0;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}

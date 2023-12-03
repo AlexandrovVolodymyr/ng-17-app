@@ -1,0 +1,44 @@
+@import '../../../../../assets/helpers/variables';
+
+.control {
+  display: flex;
+  position: relative;
+
+  .mat-mdc-checkbox {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .complete-all {
+    cursor: pointer;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    svg {
+      max-width: 30px;
+      max-height: 30px;
+    }
+  }
+
+  input[type=text] {
+    background: #ffffff;
+    border: $main-color;
+    color: $main-color;
+    font-size: 24px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 70px;
+    width: 100%;
+    padding: 16px 16px 16px 60px;
+    outline: none;
+
+    &::placeholder {
+      color: rgba(169, 169, 169, 0.4);
+      font-style: italic;
+      letter-spacing: 1.5px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../../assets/helpers/variables';
+
+.todo {
+  &__title {
+    color: $accent-color;
+    font-weight: 100;
+    font-size: 100px;
+    font-family: $main-font;
+    line-height: normal;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  &-wrapper {
+    box-shadow: $box-shadow;
+  }
+
+  .todo-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .empty-list {
+    color: $main-color;
+    font-style: italic;
+    letter-spacing: 1.5px;
+    margin-top: 16px;
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+  }
+}
