@@ -11,11 +11,12 @@ import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { TodoService } from '../../../../services/todo.service';
 import { MatCheckboxChange, MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-add-todo',
   standalone: true,
-  imports: [ReactiveFormsModule, MatCheckboxModule],
+  imports: [ReactiveFormsModule, MatCheckboxModule, MatButtonModule],
   templateUrl: './add-todo.component.html',
   styleUrl: './add-todo.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

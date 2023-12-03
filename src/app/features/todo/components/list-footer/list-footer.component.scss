@@ -29,6 +29,9 @@
     display: flex;
     margin-left: auto;
     z-index: 1;
+    @media screen and (max-width: $breakpoint-small) {
+      flex-direction: column;
+    }
 
     &__item {
       border: 1px solid transparent;

@@ -9,6 +9,9 @@
     line-height: normal;
     margin: 20px 0;
     text-align: center;
+    @media screen and (max-width: $breakpoint-small) {
+      font-size: 60px;
+    }
   }
 
   &-wrapper {

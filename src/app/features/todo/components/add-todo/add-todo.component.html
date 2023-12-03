@@ -3,4 +3,5 @@
   <input type="text" autofocus placeholder="What needs to be done?"
          [formControl]="control"
          (keyup.enter)="addTodo()">
+  <button mat-button color="accent" (click)="addTodo()">Add Todo</button>
 </label>
